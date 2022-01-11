@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { setCurrentUser } from "./redux/user/user-action";
+import { setCurrentUser } from "./redux/user/user.actions";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import Header from "./components/Header";
@@ -54,8 +54,8 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = ({ user: { currentUser } }) => ({
+  currentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
