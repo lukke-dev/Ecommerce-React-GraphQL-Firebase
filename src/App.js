@@ -5,12 +5,12 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import Header from "./components/Header";
+import CheckoutPage from "./pages/CheckoutPage";
 import SignInAndSignUpPage from "./pages/SignInAndSignUpPage";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { createStructuredSelector } from "reselect";
 import "./App.css";
-import CheckoutPage from "./pages/CheckoutPage";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
