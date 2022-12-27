@@ -1,2 +1,2 @@
 # Ecommerce-React-GraphQL-Firebase
-## Link: [Link to the App](https://ecommerce-react-2022.herokuapp.com)
+## Link: [Link to the App](https://roaring-souffle-d98701.netlify.app)
