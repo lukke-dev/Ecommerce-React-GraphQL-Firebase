@@ -1,7 +1,12 @@
-import React from "react";
+import React, { ChangeEventHandler } from "react";
 import "./style.scss";
 
-const FormInput = ({ handleChange, label, ...otherProps }) => (
+type FormInputProps = {
+  handleChange: ChangeEventHandler<HTMLInputElement>;
+  label: string;
+}
+
+const FormInput = ({ handleChange, label, ...otherProps }: FormInputProps) => (
   <div className="group">
     <input className="form-input" onChange={handleChange} {...otherProps} />
     {label ? (

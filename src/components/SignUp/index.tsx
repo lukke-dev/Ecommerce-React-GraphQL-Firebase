@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import FormInput from "../FormInput";
 import CustomButton from "../CustomButton";
 import { useDispatch } from "react-redux";
@@ -15,7 +15,7 @@ const SignUp = () => {
   const { displayName, email, password, confirmPassword } = userCredentials;
   const dispatch = useDispatch();
 
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target;
     setUserCredentials({ ...userCredentials, [name]: value });
   };

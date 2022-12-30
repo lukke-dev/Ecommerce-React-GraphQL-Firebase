@@ -12,7 +12,19 @@ import {
   PriceContainer,
 } from "./style";
 
-const CollectionItem = ({ item, addItem }) => {
+export type ItemProps = {
+  id: number;
+  name: string;
+  price: number;
+  imageUrl: string;
+  quantity: number;
+}
+
+type CollectionItemProps = {
+  item: ItemProps;
+}
+
+const CollectionItem = ({ item, addItem }: CollectionItemProps) => {
   const { name, price, imageUrl } = item;
 
   return (
